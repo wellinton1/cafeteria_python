@@ -7,11 +7,8 @@ try:
     video = yt.get()
 except:
     pass
-
 try:
-    yt.streams.filter.(res=video).first().download()
-    #yt.streams.filter(progressive=True, file_extension="mp4").get_highest_resolution().download()
-    #yt.streams.filter(progressive=True, file_extension="mp4").first().download() # biblioteca pytube
+    yt.streams.filter(res=video).first().download()
 except:
     print("erro Download")
 print("Download completo")
